@@ -14,7 +14,7 @@
             display: flex;
             list-style: none;
         }
-        
+
         li{
             margin: 10px;
         }
@@ -35,16 +35,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>{{page_name}}</h1>
-        <nav>
-            <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/form">Formulário</a></li>
-                <li><a href="/list">Lista</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+    
+    {% block body %}{% endblock %}
 </body>
 </html>
