@@ -10,7 +10,7 @@ def index():
         name = request.args.get("name")
         message = f"Olá, {name} !!"
     
-    return render_template("index.html", page_name=page_name, message=hello)
+    return render_template("index.html", page_name=page_name, message=message)
 
 @app.route("/form")
 def form():
