@@ -1,11 +1,16 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
     page_name = "Home"
-    return render_template("index.html", page_name=page_name)
+    message = "Olá !!"
+    if request.args.get("name"):
+        name = request.args.get("name")
+        message = f"Olá, {name} !!"
+    
+    return render_template("index.html", page_name=page_name, message=hello)
 
 @app.route("/form")
 def form():
